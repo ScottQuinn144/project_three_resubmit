@@ -1,3 +1,6 @@
+'''
+Import external resources for the project
+'''
 import random
 import sys
 
@@ -44,6 +47,13 @@ def play_game():
 
     for i in game_board:
         print(*i)
+
+    ship1 = create_random_ship()
+    ship2 = create_random_ship()
+    ship3 = create_random_ship()
+    ships_left = 3
+    ammo = 15
+
 
 if __name__ == "__main__":
     play_game()
