@@ -16,6 +16,13 @@ while not player.isalpha():
     print('Invalid Entry, Try Again: ')
     player = input('Please Enter Your Name: ')
 
+print(f"""\n{player}, you have 15 missles and there are 3 ships on the map.
+In order to hit them, you have
+to enter specific numbers for that location.\n
+Example: For the first row and first column.
+You have to write 1 and 1.
+\nGOODLUCK!\n""")
+
 
 def play_again():
     '''
