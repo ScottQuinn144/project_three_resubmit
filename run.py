@@ -26,12 +26,6 @@ You have to write 1 and 1.
 \nGOODLUCK!\n""")
 
 
-def play_again():
-    '''
-    Start a new game or exit the program
-    '''
-
-
 def play_game():
     '''
     Guesses and checks with data validation. This function is the code for the
@@ -71,7 +65,7 @@ def play_game():
         if game_board[row][column] == "-" or game_board[row][column] == "X":
             print(f"{player}, you have already tried that spot.")
             continue
-        elif (row, column) == ship1 or ship2 or ship3:
+        elif (row, column) == ship1 or (row, column) == ship2:
             print((f"STRIKE! You still have {ammo} missles remaining!"))
             game_board[row][column] = "X"
             ships_left -= 1
@@ -82,6 +76,21 @@ def play_game():
 
         for i in game_board:
             print(*i)
+
+
+def play_again():
+    '''
+    Start a new game or exit the program
+    '''
+    another_game = input("Play Again? <y>es or <n>o?: ").lower()
+    if another_game == "y":
+        play_game()
+    elif another_game == 'n':
+        print(f'Thanks for playing {player}')
+        sys.exit()
+    elif another_game != 'y' or 'n':
+        print('Enter "y/Y" for yes or "n/N" for no')
+        play_again()
 
 
 if __name__ == "__main__":
