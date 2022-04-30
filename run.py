@@ -85,9 +85,17 @@ def play_game():
             print('Game Over!')
             print(f"CONGRATS {player}! You WON with {ammo} missles left")
             play_again()
+        else:
+            ammo -= 1
+            print(f"Oh No! Missed! You have {ammo} missles remaining")
+            game_board[row][column] = "-"
 
         for i in game_board:
             print(*i)
+
+    print(f"Ships left: {ships_left}")
+
+    play_again()
 
 
 def play_again():
