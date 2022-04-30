@@ -1,8 +1,7 @@
+'''Random is used to randomly place ships in gameboard and sys is used
+to exit the game upon users request  '''
 import random
 import sys
-'''
-Import external resources for the project
-'''
 
 
 def create_random_ship():
@@ -72,6 +71,17 @@ def play_game():
         if game_board[row][column] == "-" or game_board[row][column] == "X":
             print(f"{player}, you have already tried that spot.")
             continue
+        elif (row, column) == ship1 or ship2 or ship3:
+            print((f"STRIKE! You still have {ammo} missles remaining!"))
+            game_board[row][column] = "X"
+            ships_left -= 1
+            if ships_left == 0:
+                print('Game Over!')
+                print(f"CONGRATS {player}! You WON with {ammo} missles left")
+                play_again()
+
+        for i in game_board:
+            print(*i)
 
 
 if __name__ == "__main__":
