@@ -11,6 +11,11 @@ def create_random_ship():
 
 print("Welcome to Battleships!")
 
+player = input('Please Enter Your Name: ')
+while not player.isalpha():
+    print('Invalid Entry, Try Again: ')
+    player = input('Please Enter Your Name: ')
+
 
 def play_again():
     '''
