@@ -70,9 +70,21 @@ def play_game():
             game_board[row][column] = "X"
             ships_left -= 1
             if ships_left == 0:
+                for i in game_board:
+                    print(*i)
                 print('Game Over!')
                 print(f"CONGRATS {player}! You WON with {ammo} missles left")
                 play_again()
+        elif (row, column) == ship3:
+            print(f"STRIKE! You still have {ammo} missles remaining!")
+            game_board[row][column] = "X"
+            ships_left -= 1
+            if ships_left == 0:
+                for i in game_board:
+                    print(*i)
+            print('Game Over!')
+            print(f"CONGRATS {player}! You WON with {ammo} missles left")
+            play_again()
 
         for i in game_board:
             print(*i)
