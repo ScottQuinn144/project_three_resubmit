@@ -21,6 +21,56 @@ This is a python led game built by Heroku. The game runs on Code Institute's moc
 
 - In the future I would look at making this game with a TDD approach and as a front end project. Using a framework like jest and javaScript I could see myself using classes instead of arrays. 
 
+## **Features**
+
+### <strong>Opening</strong>
+
+![The opening to the program](assets/images/test-name.png)
+- The opening of the program requires user input to assign a user name. If the user enters anything other than letters.. isalpha().. then and error will be fired.
+ 
+
+### <strong>Beginning of the Game</strong>
+![The board and opening instructions](assets/images/test-input-to-fstring.png)
+- This is the beginning of the game. Functions to build the game and allow for game play are called and operational. 
+
+
+### <strong>Missed a ship</strong>
+![The 'missed' message](assets/images/missiles_board.png)
+- The missles with reduce by 1 and the board updated to reflect a miss
+
+
+### <strong>Hit a ship</strong>
+![The 'strike' message](assets/images/test-strike.png)
+- The board will update to reflect a strike and the missles remaining stays the same
+
+
+
+### <strong>Wrong data validation</strong>
+
+#### Incorrect user input
+![Input to high a number](assets/images/test-1to5.png)
+- This message occurs if the user inputs a number not within the range of the board or if the input is an unexpected type.
+
+#### Already guessed
+![Already guessed spot](assets/images/test-alreadyguessed.png)
+- This message occurs if the user inputs a guess they have tried already
+
+#### Play Again?
+![Asks if the user wishes to play again](assets/images/test-yesno.png)
+- If the user wants to play again, the can. An empty game board will appear and the game functions reset.
+
+
+#### System Exit
+![Program exits](assets/images/test_sys_exit.png)
+- A goodbye message appears and the program shuts down with sys.exit()
+
+
+## **Future features**
+ A level based system will be introduced. This will allow players to choose from Easy, Medium, Hard modes.
+- Easy = 15 missles
+- Medium = 10 missles
+- Hard = 5 missles
+
 ### **Disclaimer**
 
 This site was built for educational purposes only. All rights to the title name, battleships idea or other remain with the copyright owners. `Battleships` is an educational project by the developer.
