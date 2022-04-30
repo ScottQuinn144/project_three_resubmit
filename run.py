@@ -69,6 +69,10 @@ def play_game():
         row = row - 1
         column = column - 1
 
+        if game_board[row][column] == "-" or game_board[row][column] == "X":
+            print(f"{player}, you have already tried that spot.")
+            continue
+
 
 if __name__ == "__main__":
     play_game()
