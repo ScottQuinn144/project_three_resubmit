@@ -12,7 +12,7 @@ This is a python led game built by Heroku. The game runs on Code Institute's moc
 
 - The second aim is for the developer to showcase his python skills within the coding of this game. Using the BDD method of testing, the developer's aim in the first release is to create a game without bugs.
 
-### **How to Play**
+## **How to Play**
 
 - Player will be asked there name and once given the game shall commence. Like a traditional battleships game, the player will choose a position on the gameboard to send one of there missiles. They do this by submitting a row number and a column number. The game will use this data to see if they have sunk one of the three ships on the board or if they have missed the ships. There are three ships and 15 missiles. If the player sinks all three ships, they win the game, otherwise, they will lose the game.
 
@@ -70,6 +70,71 @@ This is a python led game built by Heroku. The game runs on Code Institute's moc
 - Easy = 15 missles
 - Medium = 10 missles
 - Hard = 5 missles
+
+## **Bugs**
+- From my original submission (This is a resubmission) I didnt have the correct data validation of the user input for their name. I have addressed this with isalpha() to check that the input is the correct type.
+
+- From my original work (This is a resubmission) I didnt validate the input when the game asked the user if they wish to play again. Any input other that 'y' was accepted as a no. No with data validation I have corrected this issue.
+
+- I found that when writting the while loop, it would change all indexes in my gameboard array to a 'strike' value. I altered my while loop to address this issue I have presented below:
+
+![While loop bug](assets/images/bug-all-spot-strike.png)
+
+- I changed the while loop to that you see in [My Python Script](run.py)
+
+### Current Bugs
+- There are no current bugs in this program
+
+## **Testing**
+- I used the Behavior Driven Development (BDD) to run tests on my program. I used GitPod's own Terminal window to continually test the program. 
+
+- In my featured section you can see the testing I did for data validation. Here is an example of testing that was continually done throughtout development:
+
+![Test The Gameboard](assets/images/test-gameboard.png)
+
+- This test was done in order to see that the gameboard was runnning properly and it was.
+
+![Test Welcome](assets/images/test-welcome.png)
+
+- This was to test that my welcome message was clear and running properly.
+
+Other tests that were run throught the project can be seen in the features section. Here is a list of test I ran as a user in my game
+<ol>
+    <li>Test to see if i can select yes to start a new game</li>
+    <li>Test to see if i can select a row and colomn above 5</li>
+    <li>Test to see if i can select letters instead of numbers</li>
+    <li>Test to see if i can use a number as a name</li>
+    <li>Test to see if i can select the same spot omn the board again</li>
+</ol>
+
+### Validation Testing
+
+- PEP8
+    - No errors returned from [PEP8 Validator](http://pep8online.com/)
+
+## **Deployment**
+- I deployed my site on Heroku. I followed instructions from [Code Institue](https://codeinstitute.net/se/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=CI+-+SWE+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14660337051&hsa_grp=134087657984&hsa_ad=546251838233&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQiA15yNBhDTARIsAGnwe0UQv6qv0SwHT3sAGJ6uF8SdJR6nThPCUkVs_yMLPFdVaHSEq1RtzB8aAtAuEALw_wcB)
+
+Site deployment guide:
+<ol>
+    <li>Log into Heroku</li>
+    <li>Create new heroku app</li>
+    <li>Log into Heroku</li>
+    <li>Set the buildbacks to Python and NodeJs in that order</li>
+    <li>Link Heroku app to this repository</li>
+    <li>Select Enable Automatic Deploys</li>
+</ol>
+
+## **Credits**
+- [Code Institue](https://codeinstitute.net/se/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=CI+-+SWE+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14660337051&hsa_grp=134087657984&hsa_ad=546251838233&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQiA15yNBhDTARIsAGnwe0UQv6qv0SwHT3sAGJ6uF8SdJR6nThPCUkVs_yMLPFdVaHSEq1RtzB8aAtAuEALw_wcB)
+
+- [StackExchange](https://codereview.stackexchange.com/questions/232013/a-simple-battleship-game)
+
+*Even though I didnt use any research from the internet, this stack exchange site was demanded to be credited by the Assesor. So to save the trouble I have credited it even tho I never used it
+
+#### Libraries Used
+- Random
+- Sys
 
 ### **Disclaimer**
 
