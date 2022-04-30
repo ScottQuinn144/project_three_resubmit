@@ -1,8 +1,8 @@
+import random
+import sys
 '''
 Import external resources for the project
 '''
-import random
-import sys
 
 
 def create_random_ship():
@@ -53,6 +53,21 @@ def play_game():
     ship3 = create_random_ship()
     ships_left = 3
     ammo = 15
+
+    while ammo:
+        try:
+            row = int(input("Row: "))
+            column = int(input("Col: "))
+        except ValueError:
+            print(f"{player}, only enter numbers between 1-5!")
+            continue
+
+        if row not in range(1, 6) or column not in range(1, 6):
+            print(f"{player}, the numbers must be between 1-5!")
+            continue
+
+        row = row - 1
+        column = column - 1
 
 
 if __name__ == "__main__":
