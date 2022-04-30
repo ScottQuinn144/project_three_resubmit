@@ -32,9 +32,18 @@ def play_again():
 
 def play_game():
     '''
-    Guesses and checks with data validation
+    Guesses and checks with data validation. This function is the code for the
+    gameplay.
     '''
+    print("Let's Begin\n")
+    game_board = [["O", "O", "O", "O", "O"],
+                  ["O", "O", "O", "O", "O"],
+                  ["O", "O", "O", "O", "O"],
+                  ["O", "O", "O", "O", "O"],
+                  ["O", "O", "O", "O", "O"]]
 
+    for i in game_board:
+        print(*i)
 
 if __name__ == "__main__":
     play_game()
