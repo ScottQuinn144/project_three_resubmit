@@ -78,7 +78,7 @@ This is a python led game built by Heroku and is a purely backend project in acc
 ## **Bugs**
 - From my original submission (This is a resubmission) I didnt have the correct data validation of the user input for their name. I have addressed this with isalpha() to check that the input is the correct type.
 
-- From my original work (This is a resubmission) I didnt validate the input when the game asked the user if they wish to play again. Any input other that 'y' was accepted as a no. No with data validation I have corrected this issue.
+- From my original work (This is a resubmission) I didnt validate the input when the game asked the user if they wish to play again. Any input other that 'y' was accepted as a no. With a simple if statement I have corrected this issue with user feedback.
 
 - I found that when writting the while loop, it would change all indexes in my gameboard array to a 'strike' value. I altered my while loop to address this issue I have presented below:
 
@@ -87,7 +87,7 @@ This is a python led game built by Heroku and is a purely backend project in acc
 - I changed the while loop to that you see in [My Python Script](run.py)
 
 ### Current Bugs
-- There are no current bugs in this program
+- There are no current bugs from a users perspective in this program when I tested it using the BDD method. 
 
 ## **Testing**
 - I used the Behavior Driven Development (BDD) to run tests on my program. I used GitPod's own Terminal window to continually test the program. 
