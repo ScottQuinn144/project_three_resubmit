@@ -124,12 +124,13 @@ Site deployment guide:
     <li>Log into Heroku Account</li>
     <li>Create new heroku app</li>
     <li>Set the buildbacks to Python and NodeJs in that order</li>
+    <li>Add config vars. key = PORT value = 8000
     <li>Open GitPod workspace with repository that will be used</li>
     <li>Link Heroku app to this repository
         <ol>
-        <li>Type 'heroku login -i into terminal</li>
+        <li>Type 'heroku login -i' into terminal</li>
         <li>Enter your email and password details for your Heroku account</li>
-        <li>Type 'heroku git:remote -a (project name in Heroku)</li>
+        <li>Type 'heroku git:remote -a (project name in Heroku)' into terminal</li>
         <li>Type 'git push heroku main' to push and build app</li>
         </ol>
     </li>
