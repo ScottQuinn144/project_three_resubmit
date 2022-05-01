@@ -1,6 +1,10 @@
 # **Battleships**
 ## **Overview:**
-This is a python led game built by Heroku. The game runs on Code Institute's mock terminal. The game is single player battleships game with the objective to destroy 3 randomly placed ships on a 5x5 grid board with 15 wrong attempts.
+This is a python led game built by Heroku and is a purely backend project in accordance with Code Institute's project goals. The game runs on Code Institute's mock terminal. The game is single player battleships game with the objective to destroy 3 randomly placed ships on a 5x5 grid board with 15 wrong attempts.
+
+[Here is the live version of my application](https://battleships-resubmission.herokuapp.com/)
+
+![Web Appearance](assets/images/responsive.png)
 
 ### **Aim**
 
@@ -117,18 +121,26 @@ Other tests that were run throught the project can be seen in the features secti
 
 Site deployment guide:
 <ol>
-    <li>Log into Heroku</li>
+    <li>Log into Heroku Account</li>
     <li>Create new heroku app</li>
-    <li>Log into Heroku</li>
     <li>Set the buildbacks to Python and NodeJs in that order</li>
-    <li>Link Heroku app to this repository</li>
-    <li>Select Enable Automatic Deploys</li>
+    <li>Open GitPod workspace with repository that will be used</li>
+    <li>Link Heroku app to this repository
+        <ol>
+        <li>Type 'heroku login -i into terminal</li>
+        <li>Enter your email and password details for your Heroku account</li>
+        <li>Type 'heroku git:remote -a (project name in Heroku)</li>
+        <li>Type 'git push heroku main' to push and build app</li>
+        </ol>
+    </li>
 </ol>
 
 ## **Credits**
 - [Code Institue](https://codeinstitute.net/se/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=CI+-+SWE+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14660337051&hsa_grp=134087657984&hsa_ad=546251838233&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQiA15yNBhDTARIsAGnwe0UQv6qv0SwHT3sAGJ6uF8SdJR6nThPCUkVs_yMLPFdVaHSEq1RtzB8aAtAuEALw_wcB)
 
 - [StackExchange](https://codereview.stackexchange.com/questions/232013/a-simple-battleship-game)
+
+- Heroku for building and hosting my application
 
 *Even though I didnt use any research from the internet, this stack exchange site was demanded to be credited by the Assesor. So to save the trouble I have credited it even tho I never used it
 
