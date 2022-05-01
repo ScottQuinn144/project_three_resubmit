@@ -108,7 +108,7 @@ Other tests that were run throught the project can be seen in the features secti
     <li>Test to see if i can select a row and colomn above 5</li>
     <li>Test to see if i can select letters instead of numbers</li>
     <li>Test to see if i can use a number as a name</li>
-    <li>Test to see if i can select the same spot omn the board again</li>
+    <li>Test to see if i can select the same spot on the board again</li>
 </ol>
 
 ### Validation Testing
