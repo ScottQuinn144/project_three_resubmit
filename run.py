@@ -67,9 +67,9 @@ def play_game():
             continue
         elif (row, column) == ship1 or (row, column) == ship2:
             print((f"STRIKE! You still have {ammo} missles remaining!"))
-            print(f"Ships left: {ships_left}")
             game_board[row][column] = "X"
             ships_left -= 1
+            print(f"Ships left: {ships_left}")
             if ships_left == 0:
                 for i in game_board:
                     print(*i)
@@ -78,9 +78,9 @@ def play_game():
                 play_again()
         elif (row, column) == ship3:
             print(f"STRIKE! You still have {ammo} missles remaining!")
-            print(f"Ships left: {ships_left}")
             game_board[row][column] = "X"
             ships_left -= 1
+            print(f"Ships left: {ships_left}")
             if ships_left == 0:
                 for i in game_board:
                     print(*i)
