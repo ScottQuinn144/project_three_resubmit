@@ -53,10 +53,14 @@ def play_game():
             column = int(input("Col: "))
         except ValueError:
             print(f"{player}, only enter numbers between 1-5!")
+            for i in game_board:
+                print(*i)
             continue
 
         if row not in range(1, 6) or column not in range(1, 6):
             print(f"{player}, the numbers must be between 1-5!")
+            for i in game_board:
+                print(*i)
             continue
 
         row = row - 1
@@ -64,11 +68,24 @@ def play_game():
 
         if game_board[row][column] == "-" or game_board[row][column] == "X":
             print(f"{player}, you have already tried that spot.")
+            for i in game_board:
+                print(*i)
             continue
-        elif (row, column) == ship1 or (row, column) == ship2:
+        elif (row, column) == ship1:
+            ships_left -= 1
             print((f"STRIKE! You still have {ammo} missles remaining!"))
             game_board[row][column] = "X"
+            print(f"Ships left: {ships_left}")
+            if ships_left == 0:
+                for i in game_board:
+                    print(*i)
+                print('Game Over!')
+                print(f"CONGRATS {player}! You WON with {ammo} missles left")
+                play_again()
+        elif (row, column) == ship2:
             ships_left -= 1
+            print((f"STRIKE! You still have {ammo} missles remaining!"))
+            game_board[row][column] = "X"
             print(f"Ships left: {ships_left}")
             if ships_left == 0:
                 for i in game_board:
@@ -77,17 +94,16 @@ def play_game():
                 print(f"CONGRATS {player}! You WON with {ammo} missles left")
                 play_again()
         elif (row, column) == ship3:
-            print(f"STRIKE! You still have {ammo} missles remaining!")
-            game_board[row][column] = "X"
             ships_left -= 1
+            print((f"STRIKE! You still have {ammo} missles remaining!"))
+            game_board[row][column] = "X"
             print(f"Ships left: {ships_left}")
             if ships_left == 0:
                 for i in game_board:
                     print(*i)
-            print('Game Over!')
-            print(f"Ships left: {ships_left}")
-            print(f"CONGRATS {player}! You WON with {ammo} missles left")
-            play_again()
+                print('Game Over!')
+                print(f"CONGRATS {player}! You WON with {ammo} missles left")
+                play_again()
         else:
             ammo -= 1
             print(f"Oh No! Missed! You have {ammo} missles remaining")
